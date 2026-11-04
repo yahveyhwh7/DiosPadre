@@ -118,7 +118,7 @@
             position: relative;
         }
 
-        /* TARJETA CON 30% DE OPACIDAD BLANCA Y BORDE DORADO */
+        /* TARJETA CON 30% DE OPACIDAD BLANCA */
         .hero-card {
             position: relative;
             z-index: 2;
@@ -142,25 +142,24 @@
 
         .hero-card p {
             font-size: 1.25rem;
-            color: #F4D489; /* Color dorado */
+            color: #F4D489;
             font-style: italic;
             font-weight: bold;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
 
-        /* --- SECCIÓN VIDEO REDUCIDO AL 50% --- */
+        /* --- SECCIÓN VIDEO (SIN TEXTO Y CON AUTOPLAY) --- */
         .video-section {
             background-color: var(--color-primario-1);
             padding: 2.5rem 1rem;
             text-align: center;
-            color: white;
         }
 
         .video-container {
-            max-width: 420px; /* Reducido a la mitad */
-            margin: 1rem auto 0 auto;
+            max-width: 420px;
+            margin: 0 auto;
             position: relative;
-            padding-bottom: 236px; /* Altura ajustada */
+            padding-bottom: 236px;
             height: 0;
             overflow: hidden;
             border-radius: 8px;
@@ -175,7 +174,7 @@
             border: 0;
         }
 
-        /* --- RED DE TARJETAS INTRODUCTORIAS (CARDS) --- */
+        /* --- CUADRÍCULA DE TARJETAS INTRODUCTORIAS --- */
         .main-container {
             max-width: 1100px;
             margin: 3rem auto;
@@ -221,14 +220,14 @@
         .card-title {
             color: var(--color-primario-1);
             font-size: 1.4rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         .card-subtitle {
             color: var(--color-primario-2);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .card-text {
@@ -258,32 +257,49 @@
         footer {
             background-color: #ffffff;
             border-top: 1px solid #e0e0e0;
-            padding: 2rem 1rem;
-            text-align: center;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
         }
 
         .copyright {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 1rem;
-            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: bold;
         }
 
-        .social-icons {
+        .social-container {
             display: flex;
-            justify-content: center;
-            gap: 1.2rem;
+            align-items: center;
+            gap: 1.5rem;
         }
 
-        .social-icons a {
+        .social-container span {
+            font-weight: bold;
+            color: var(--color-primario-1);
+            font-size: 0.95rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             color: #000000;
-            font-size: 2rem;
-            transition: transform 0.2s, color 0.2s;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.2s;
         }
 
-        .social-icons a:hover {
+        .social-link i {
+            font-size: 1.5rem;
+        }
+
+        .social-link:hover {
             color: var(--color-primario-2);
-            transform: scale(1.1);
         }
     </style>
 </head>
@@ -311,7 +327,7 @@
         </div>
     </nav>
 
-    <!-- PORTADA PARALLAX CON TARJETA AL 30% DE OPACIDAD -->
+    <!-- PORTADA PARALLAX -->
     <section id="inicio" class="hero-parallax">
         <div class="hero-card">
             <h1>Dios Padre</h1>
@@ -319,85 +335,89 @@
         </div>
     </section>
 
-    <!-- VIDEO DE YOUTUBE REDUCIDO -->
+    <!-- VIDEO DE YOUTUBE CON AUTOPLAY -->
     <section class="video-section">
-        <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Video Introductorio</h3>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/irKF5LLVC30" title="YouTube video player" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/irKF5LLVC30?autoplay=1&mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
 
-    <!-- CUADRÍCULA DE SECCIONES INTRODUCTORIAS -->
+    <!-- CUADRÍCULA DE TARJETAS DE CONTENIDO -->
     <div class="main-container">
         <div class="cards-grid">
 
-            <!-- TARJETA 1: REVELACIÓN -->
+            <!-- APARTADO 1: REVELACIÓN -->
             <div id="revelacion" class="card-item">
                 <img src="revelacion.png" alt="Revelación" class="card-image">
                 <div class="card-body">
                     <h3 class="card-title">Revelación</h3>
-                    <div class="card-subtitle">El Padre le habla a sus hijos</div>
-                    <p class="card-text">Tenemos un Padre que nos ama como nadie jamás podrá amarnos. Siente toda la ternura y el amor de Nuestro Padre en el hermoso mensaje que El mismo ha dejado para todos sus hijos.</p>
-                    <a href="#" class="card-btn">Ir a la Revelación</a>
+                    <div class="card-subtitle">El Padre le habla a sus hijos.</div>
+                    <p class="card-text">El mensaje del Padre fue una revelación privada a una religiosa de nombre Elisabetta Ravasio. Aquí encontrarás su historia.</p>
+                    <a href="#" class="card-btn">Leer más</a>
                 </div>
             </div>
 
-            <!-- TARJETA 2: MATERIAL -->
+            <!-- APARTADO 2: MATERIAL -->
             <div id="material" class="card-item">
                 <img src="material.png" alt="Material" class="card-image">
                 <div class="card-body">
                     <h3 class="card-title">Material</h3>
-                    <div class="card-subtitle">Recursos y Documentos</div>
-                    <p class="card-text">Encuentra material gráfico, escritos e iconografía para profundizar en el conocimiento teológico y filial de Dios Padre.</p>
-                    <a href="#" class="card-btn">Ir a Material</a>
+                    <div class="card-subtitle">Recursos e imágenes.</div>
+                    <p class="card-text">Encuentra material gráfico especializado en explicar el significado de la iconografía de la imagen de Dios Padre.</p>
+                    <a href="#" class="card-btn">Leer más</a>
                 </div>
             </div>
 
-            <!-- TARJETA 3: ORACIONES -->
+            <!-- APARTADO 3: ORACIONES -->
             <div id="oraciones" class="card-item">
                 <img src="oraciones.jpg" alt="Oraciones" class="card-image">
                 <div class="card-body">
                     <h3 class="card-title">Oraciones</h3>
-                    <div class="card-subtitle">Consagración y Devoción</div>
-                    <p class="card-text">Luego de sentir el amor de Nuestro Padre, es importante corresponderle adecuadamente. Descubre las oraciones de adoración, alabanza y consagración.</p>
-                    <a href="#" class="card-btn">Ir a Oraciones</a>
+                    <div class="card-subtitle">¿Cómo rendirle un culto a Dios Padre?</div>
+                    <p class="card-text">Una manera de mejorar nuestra relación con aquel que nos creó, es por medio de oraciones. Descubre aquí varios formatos: día santo, semana de adoración, novena bíblica, el mes de Dios Padre, entre otros.</p>
+                    <a href="#" class="card-btn">Leer más</a>
                 </div>
             </div>
 
-            <!-- TARJETA 4: CANTOS -->
+            <!-- APARTADO 4: CANTOS -->
             <div id="cantos" class="card-item">
                 <img src="cantos.jpg" alt="Cantos" class="card-image">
                 <div class="card-body">
                     <h3 class="card-title">Cantos</h3>
-                    <div class="card-subtitle">Alabanza Paternal</div>
-                    <p class="card-text">Una colección de cantos y música dedicados a glorificar la primera persona de la Santísima Trinidad.</p>
-                    <a href="#" class="card-btn">Ir a Cantos</a>
+                    <div class="card-subtitle">Alabanza y Glorificación</div>
+                    <p class="card-text">Una colección exclusiva de cantos de nuestra autoría dedicados a glorificar la primera persona de la Santísima Trinidad.</p>
+                    <a href="#" class="card-btn">Leer más</a>
                 </div>
             </div>
 
-            <!-- TARJETA 5: ROSARIO DE DIOS PADRE -->
+            <!-- APARTADO 5: ROSARIO -->
             <div id="rosario" class="card-item">
                 <img src="rosario.jpeg" alt="Rosario de Dios Padre" class="card-image">
                 <div class="card-body">
-                    <h3 class="card-title">Rosario de Dios Padre</h3>
-                    <div class="card-subtitle">Guía de Recitación</div>
-                    <p class="card-text">Guía completa para rezar el Rosario a Dios Padre, sus cinco misterios de triunfo, las jaculatorias y las litanías con aprobación eclesiástica.</p>
-                    <a href="#" class="card-btn">Ir al Rosario</a>
+                    <h3 class="card-title">Rosario</h3>
+                    <div class="card-subtitle">Guía de Recitación.</div>
+                    <p class="card-text">Descubre paso a paso cómo rezar el Rosario a Dios Padre, sus cinco misterios, las jaculatorias y las letanías con aprobación eclesiástica.</p>
+                    <a href="#" class="card-btn">Leer más</a>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <!-- PIE DE PÁGINA (FOOTER SIMPLIFICADO) -->
+    <!-- PIE DE PÁGINA (FOOTER) -->
     <footer>
         <div class="copyright">
-            &copy; 2026 DIOS PADRE. CENTRO DE INVESTIGACIÓN RELIGIOSA. TODOS LOS DERECHOS RESERVADOS.
+            © 2026. Dios Padre.
         </div>
 
-        <div class="social-icons">
-            <a href="https://youtube.com/@diospadre-soy-yo?si=RmNq2xoDpDnk9uEl" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.facebook.com/share/19pRTYAUc1/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <div class="social-container">
+            <span>Síguenos en:</span>
+            <a href="https://youtube.com/@diospadre-soy-yo?si=RmNq2xoDpDnk9uEl" target="_blank" class="social-link">
+                <i class="fab fa-youtube"></i> Dios Padre
+            </a>
+            <a href="https://www.facebook.com/share/19pRTYAUc1/" target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i> Dios Padre
+            </a>
         </div>
     </footer>
 
